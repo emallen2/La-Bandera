@@ -22,7 +22,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: #FF0000;
+    background-color: #C51605;
     align-items: center;
     padding: 15px 20px;
     width: 100%; 
@@ -32,9 +32,10 @@ header {
 }
 
 
+
 .logo {
     font-family: "Rampart One", sans-serif ;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -116,7 +117,7 @@ nav ul li a {
 
 .btn {
     display: inline-block;
-    background-color: #97BE5A;
+    background-color: #FD8D14;
     color: #333;
     padding: 10px 20px;
     border-radius: 5px;
