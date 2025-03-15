@@ -141,8 +141,11 @@ nav ul li a {
 /* Slide Text Styling */
 .slide-text {
     position: absolute;
+    flex-wrap: wrap;
     top: 50%;
-    left: 10%; 
+    /* left: 10%;    */
+    padding-left: 10%;
+    padding-right: 10%;
     transform: translateY(-50%);
     color: black;
     z-index: 10;
