@@ -175,11 +175,13 @@ nav ul li a {
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    border: none;
 }
 
 .btn:hover {
     background-color: #db8a3e;
     color: #F3F0D7;
+    cursor: pointer;
 }
 
 /* Animation */
@@ -224,6 +226,151 @@ nav ul li a {
 span{
     font-weight: bold;
 }
+
+
+
+/* Sidebar Cart Styles */
+  
+
+/* Cart toggle button */
+#toggle-cart-btn {
+    /* position: fixed; */
+    top: 20px;
+    right: 20px;
+    z-index: 100; 
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer; 
+  }
+  
+  /* Cart sidebar open/close behavior */
+  .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff7f0;
+    padding: 20px;
+    border-left: 2px solid #FFA27F;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  .cart-sidebar h2 {
+    margin-top: 0;
+  }
+  
+  /* Hide cart sidebar */
+  .cart-sidebar.closed {
+    transform: translateX(100%);
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #close-cart-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* Layout for menu + cart using flex */
+.menu-page {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  /* Make menu content responsive */
+  .menu-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 0;
+  }
+  
+  
+  /* Cart item layout with buttons */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .cart-item-controls button {
+    padding: 2px 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  /* checkout button */
+
+  #checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #DF9755;
+    color: #211e1e;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color 0.3s ease;
+  }
+  
+  #checkout-btn:hover {
+    background-color: #db8a3e;
+    color: #F3F0D7;
+    cursor: pointer;
+  }
+  
+
+
+/* Responsive layout on small screens */
+@media (max-width: 768px) {
+    .menu-page {
+      flex-direction: column;
+    }
+  
+    .cart-sidebar {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      position: relative;
+      transform: translateX(0); /* Always visible in mobile layout */
+      border-left: none;
+      border-top: 2px solid #FFA27F;
+    }
+  
+    .cart-sidebar.closed {
+      display: none;
+    }
+  
+    #toggle-cart-btn {
+      position: static;
+      margin: 10px auto;
+      display: block;
+    }
+  }
+
 
 
 /* Gallery */

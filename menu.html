@@ -28,12 +28,27 @@
         </nav>
         
         <a href="#" class="order-btn">
-            <i class="fas fa-shopping-cart"></i> 
             <i class="fa-solid fa-user"></i>
-            <i class="fas fa-shopping-cart"></i>Order Online
+            <i class="fas fa-shopping-cart" id="toggle-cart-btn"></i>Order Online
         </a>
         
     </header>
+
+    <div class="menu-page">
+
+    <!-- Cart sidebar -->
+    <aside id="cart" class="cart-sidebar closed">
+        <div class="cart-header">
+          <h2 class="K2D">Cart</h2>
+          <button id="close-cart-btn">✖</button>
+        </div>
+        <ul id="cart-items"></ul>
+        <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+        <button onclick="clearCart()" class="btn">Clear Cart</button>
+        <button id="checkout-btn">Checkout</button>
+      </aside>
+
+    <!-- Menu section -->
 
     <section class="menu-section">
         <h2 class="K2D">Our Menu</h2>
@@ -43,50 +58,52 @@
                 <img class="image" src="images/labandera.png" alt="rice,beans and meat dish">
                 <p>Rice, beans, and chicken - the Dominican classic.</p>
                 <span>$11.99</span>
-                <a href="#" class="btn" id="add-btn">Add to Cart</a>
+                <button class="btn" id="add-btn" onclick="addToCart('La Bandera', 11.99)">Add to Cart</button>
             </div>
             <div class="menu-card">
                 <h3 class="K2D">Los Tres golpes</h3>
                 <img class="image" src="images/mangu.jpg" alt="image of a dish called mangu">
                 <p>Mashed plantains with eggs, cheese, and salami.</p>
                 <span>$8.99</span>
-                <a href="#" class="btn" id="add-btn">Add to Cart</a>
+                <button class="btn" id="add-btn" onclick="addToCart('Los Tres Golpes', 8.99)">Add to Cart</button>
             </div>
             <div class="menu-card">
                 <h3 class="K2D">Sancocho</h3>
                 <img class="image" src="images/sancocho.webp" alt="meat and vegetable soup">
                 <p>Dominican meat and vegetable stew.</p>
                 <span>$9.99</span>
-                <a href="#" class="btn" id="add-btn">Add to Cart</a>
+                <button class="btn" id="add-btn" onclick="addToCart('Sancocho', 9.99)">Add to Cart</button>
             </div>
             <div class="menu-card">
                 <h3 class="K2D">Ensalada Verde</h3>
                 <img class="image" src="images/ensaladaverde.png" alt="green salad">
                 <p>Salad with Lettuce, Shredded cabbage, Tomato, Cucumber, Onion, etc.</p>
                 <span>$3.99</span>
-                <a href="#" class="btn" id="add-btn">Add to Cart</a>
+                <button class="btn" id="add-btn" onclick="addToCart('Ensalada Verde', 3.99)">Add to Cart</button>
             </div>
             <div class="menu-card">
                 <h3 class="K2D">Tostones</h3>
                 <img class="image" src="images/tostones.jpeg" alt="fried plantains">
                 <p>Fried plantains</p>
                 <span>$3.99</span>
-                <a href="#" class="btn" id="add-btn">Add to Cart</a>
+                <button class="btn" id="add-btn" onclick="addToCart('Tostones', 3.99)">Add to Cart</button>
             </div>
             <div class="menu-card">
                 <h3 class="K2D">Habichuelas con dulce</h3>
                 <img class="image" src="images/habichuelas_con_dulce.jpg" alt="Sweet beans">
                 <p>Dominican dessert made with beans, milk, coconut milk, sweet potatoes (batata), raisins, and spices</p>
                 <span>$4.99</span>
-                <a href="#" class="btn" id="add-btn">Add to Cart</a>
+                <button class="btn" id="add-btn" onclick="addToCart('Habichuelas con dulce', 4.99)">Add to Cart</button>
             </div>
         </div>
     </section>
+</div>
 
     <footer>
         <p>Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
         <p>Business Hours: Mon-Sun 7 AM - 11 PM</p>
     </footer>
 
+    <script src="cart.js"></script>
 </body>
 </html>
